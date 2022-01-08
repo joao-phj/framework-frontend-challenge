@@ -1,4 +1,4 @@
-# framework-fronten-challenge
+# framework-frontend-challenge
 Front-end challenge for framework digial:
 
 Construa uma aplicação Web que irá utilizar as listagens de uma API Rest.
