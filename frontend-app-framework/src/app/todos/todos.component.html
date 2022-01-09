@@ -1,0 +1,21 @@
+<mat-grid-list cols="3" rowHeight="300px">
+    <mat-grid-tile *ngFor="let toDo of toDos">
+        <mat-card class="example-card">
+            <mat-card-subtitle>{{toDo.userId}}</mat-card-subtitle>
+            <mat-card-title>{{toDo.title}}</mat-card-title>
+            <mat-card-content>
+            <p>{{toDo.completed}}</p>
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions>
+                <span class="card-action-spacer"></span>
+                <button mat-mini-fab aria-label="Example icon button with a home icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-mini-fab aria-label="Example icon button with a home icon">
+                    <mat-icon>share</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
