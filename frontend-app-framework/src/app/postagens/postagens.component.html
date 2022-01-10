@@ -1,8 +1,12 @@
-<mat-grid-list cols="3" rowHeight="300px">
+<!-- <mat-grid-list cols="3" rowHeight="2:1">
     <mat-grid-tile *ngFor="let postagem of postagens">
-        <mat-card class="example-card">
-            <mat-card-subtitle>{{postagem.userId}}</mat-card-subtitle>
-            <mat-card-title>{{postagem.title}}</mat-card-title>
+        <mat-card class="example-card mat-elevation-z10">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-subtitle>{{postagem.userId}}</mat-card-subtitle>
+                <mat-card-title>{{postagem.title}}</mat-card-title>
+            </mat-card-header>
+            <mat-divider inset></mat-divider>
             <mat-card-content>
             <p>{{postagem.body}}</p>
             </mat-card-content>
@@ -18,4 +22,25 @@
             </mat-card-actions>
         </mat-card>
     </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
+
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="3rem grid">
+        <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let postagem of postagens">
+            <mat-card class="mat-elevation-z10" >
+                <mat-card-header>
+                    <mat-card-subtitle>User {{postagem.userId}}</mat-card-subtitle>
+                    <mat-card-title>{{postagem.title}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{postagem.body}}</p>
+                </mat-card-content>
+                <mat-divider inset></mat-divider>
+                <mat-card-actions align="end">
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -10,6 +10,8 @@ import { AlbunsComponent } from './albuns/albuns.component';
 import { TodosComponent } from './todos/todos.component';
 import { HeaderComponent } from './header/header.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { MaterialModule } from './material/material.module';
 
 @NgModule({
@@ -25,7 +27,8 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
