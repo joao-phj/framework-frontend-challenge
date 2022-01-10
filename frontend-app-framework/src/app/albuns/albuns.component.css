@@ -1,19 +1,16 @@
-.example-card {
-    width: 80%;
-    height: 80%;
-    position: relative;
-}
-
 .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
 }
 
-.card-action-spacer {
-    flex: 1 1 auto;
+.content-albuns {
+    padding: 4rem;
 }
 
-mat-card-actions button {
-    margin-right: 1rem;
-    bottom: 0;
+.content-albuns > mat-card {
+    width:100%;
+}
+
+.content-albuns > mat-card button, [mat-mini-fab] {
+    margin-left: .75rem;
 }

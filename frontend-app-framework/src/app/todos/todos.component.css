@@ -1,0 +1,28 @@
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.content-todos {
+    padding: 4rem;
+}
+
+.content-todos > mat-card {
+    width:100%;
+}
+
+.content-todos mat-card {
+    height:80%;
+}
+
+.content-todos > mat-card button, [mat-mini-fab] {
+    margin-left: .75rem;
+}
+
+.checked-todo-item {
+    background-color: #aaf255;
+}
+
+.unchecked-todo-item {
+    background-color: #ffaf49;
+}

@@ -1,44 +1,23 @@
-<!-- <mat-grid-list cols="3" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let postagem of postagens">
-        <mat-card class="example-card mat-elevation-z10">
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-subtitle>{{postagem.userId}}</mat-card-subtitle>
-                <mat-card-title>{{postagem.title}}</mat-card-title>
-            </mat-card-header>
-            <mat-divider inset></mat-divider>
-            <mat-card-content>
-            <p>{{postagem.body}}</p>
-            </mat-card-content>
-            <mat-divider inset></mat-divider>
-            <mat-card-actions>
-                <span class="card-action-spacer"></span>
-                <button mat-mini-fab aria-label="Example icon button with a home icon">
-                    <mat-icon>favorite</mat-icon>
-                </button>
-                <button mat-mini-fab aria-label="Example icon button with a home icon">
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-    </mat-grid-tile>
-</mat-grid-list> -->
-
-<div class="content">
+<div class="page-header">
+    <h1><mat-icon>chat</mat-icon> Postagens</h1>
+</div>
+<div class="content-postagens">
     <div fxLayout="row wrap" fxLayoutGap="3rem grid">
-        <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let postagem of postagens">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let postagem of postagens">
             <mat-card class="mat-elevation-z10" >
-                <mat-card-header>
-                    <mat-card-subtitle>User {{postagem.userId}}</mat-card-subtitle>
-                    <mat-card-title>{{postagem.title}}</mat-card-title>
-                </mat-card-header>
+                <mat-card-subtitle>User {{postagem.userId}} | Postagem {{postagem.id}}</mat-card-subtitle>
+                <mat-card-title>{{postagem.title}}</mat-card-title>
                 <mat-card-content>
                     <p>{{postagem.body}}</p>
                 </mat-card-content>
                 <mat-divider inset></mat-divider>
                 <mat-card-actions align="end">
-                    <button mat-button>LIKE</button>
-                    <button mat-button>SHARE</button>
+                    <button color="primary" mat-mini-fab aria-label="Example icon button with a home icon">
+                        <mat-icon>thumb_up</mat-icon>
+                    </button>
+                    <button color="warn" mat-mini-fab aria-label="Example icon button with a home icon">
+                        <mat-icon>thumb_down</mat-icon>
+                    </button>
                 </mat-card-actions>
             </mat-card>
         </div>

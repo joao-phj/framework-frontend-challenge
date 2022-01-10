@@ -10,3 +10,39 @@ body {
     background-color: #eec0c6;
     background-image: linear-gradient(335deg, #7ee8fa 0%, #eec0c6 65%);
 }
+
+.page-header {
+    background-color: #ff4081;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: auto;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    color: #fff;
+    display: block;
+    padding-left: 20px;
+    margin-top: 4rem;
+}
+
+.page-header h1 {
+    font-size: 20px;
+    font-weight: 300;
+    height: 24px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-bottom: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 28px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 28px;
+}
+
+.page-header h1 mat-icon {
+    font-size: 20px;
+}

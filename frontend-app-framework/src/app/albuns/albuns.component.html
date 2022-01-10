@@ -1,17 +1,27 @@
-<mat-grid-list cols="3" rowHeight="300px">
-    <mat-grid-tile *ngFor="let album of albuns">
-        <mat-card class="example-card">
-            <mat-card-subtitle>{{album.userId}}</mat-card-subtitle>
-            <mat-card-title>{{album.title}}</mat-card-title>
-            <mat-card-actions>
-                <span class="card-action-spacer"></span>
-                <button mat-mini-fab aria-label="Example icon button with a home icon">
-                    <mat-icon>favorite</mat-icon>
-                </button>
-                <button mat-mini-fab aria-label="Example icon button with a home icon">
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="page-header">
+    <h1><mat-icon>collections</mat-icon> Albuns</h1>
+</div>
+<div class="content-albuns">
+    <div fxLayout="row wrap" fxLayoutGap="3rem grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let album of albuns">
+            <mat-card class="mat-elevation-z10" >
+                <mat-card-header>
+                    <mat-card-subtitle>User {{album.userId}} | Album {{album.id}}</mat-card-subtitle>
+                    <mat-card-title>{{album.title}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-actions align="end">
+                    <button mat-mini-fab aria-label="Example icon button with a home icon">
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+                    <button mat-mini-fab aria-label="Example icon button with a home icon">
+                        <mat-icon>share</mat-icon>
+                    </button>
+                    <button mat-mini-fab aria-label="Example icon button with a home icon">
+                        <mat-icon>open_in_new</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

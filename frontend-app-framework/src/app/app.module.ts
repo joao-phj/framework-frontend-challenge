@@ -5,12 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { PostagensComponent } from './postagens/postagens.component';
 import { AlbunsComponent } from './albuns/albuns.component';
 import { TodosComponent } from './todos/todos.component';
 import { HeaderComponent } from './header/header.component';
-
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from './material/material.module';
 
@@ -28,6 +29,7 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    FormsModule,
     FlexLayoutModule
   ],
   providers: [],

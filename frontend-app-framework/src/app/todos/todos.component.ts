@@ -12,6 +12,8 @@ export class TodosComponent implements OnInit {
   toDos: Todo[];
   loadError: Error;
 
+  checked = true;
+
   constructor(private fetcherService: FetcherService) { }
 
   ngOnInit() {

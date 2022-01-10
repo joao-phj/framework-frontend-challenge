@@ -3,14 +3,14 @@
     background-size: cover;
 }
 
-.content {
+.content-postagens {
     padding: 4rem;
 }
 
-.content > mat-card {
+.content-postagens > mat-card {
     width:100%;
 }
 
-mat-card {
-    height: 90%;
+.content-postagens > mat-card button, [mat-mini-fab] {
+    margin-left: .75rem;
 }

@@ -1,21 +1,20 @@
-<mat-grid-list cols="3" rowHeight="300px">
-    <mat-grid-tile *ngFor="let toDo of toDos">
-        <mat-card class="example-card">
-            <mat-card-subtitle>{{toDo.userId}}</mat-card-subtitle>
-            <mat-card-title>{{toDo.title}}</mat-card-title>
-            <mat-card-content>
-            <p>{{toDo.completed}}</p>
-            </mat-card-content>
-            <mat-divider inset></mat-divider>
-            <mat-card-actions>
-                <span class="card-action-spacer"></span>
-                <button mat-mini-fab aria-label="Example icon button with a home icon">
-                    <mat-icon>favorite</mat-icon>
-                </button>
-                <button mat-mini-fab aria-label="Example icon button with a home icon">
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="page-header">
+    <h1><mat-icon>checklist</mat-icon> To-Do's</h1>
+</div>
+<div class="content-todos">
+    <div fxLayout="row wrap" fxLayoutGap="3rem grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let toDo of toDos">
+            <mat-card   [ngClass]="{
+                                    'checked-todo-item': toDo.completed == true,
+                                    'unchecked-todo-item': toDo.completed == false
+                                }" 
+                        class="mat-elevation-z10" >
+                <mat-card-subtitle>User {{toDo.userId}} | Postagem {{toDo.id}}</mat-card-subtitle>
+                <mat-card-title>{{toDo.title}}</mat-card-title>
+                <mat-content>
+                    <mat-checkbox [color]="warn" [(ngModel)]="toDo.completed" class="example-margin">Done</mat-checkbox>
+                </mat-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

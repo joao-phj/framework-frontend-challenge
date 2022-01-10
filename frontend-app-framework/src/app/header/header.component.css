@@ -5,3 +5,15 @@ span {
 .toolbar-spacer {
     flex: 1 1 auto;
 }
+
+.main-header {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+}
+
+h1 {
+    margin-left: 10px;
+}
